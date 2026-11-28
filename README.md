@@ -126,4 +126,5 @@ FPS and frame time, sim tick / seed, per-pool active/free/created counts, player
 - **Interpolation under hit-stop.** `alpha` is forced to 1 while frozen, otherwise rendering would oscillate between the previous and current tick.
 - **Restart safety.** `World.reset` resets state in place and never re-creates the bus; `Game.restart` also clears Fx pools, the camera, latched input edges and timers.
 - **Input edges.** Presses latch in `Input` until a simulation tick consumes them, so a press that lands during hit-stop or between ticks is never lost.
+- **Playtested by hand.** The author has played the whole game personally and had friends play it. The notes below about bots describe the automated checks; feel and difficulty have been judged by real players, though no formal playtest data (win rates, timings) was recorded.
 - **Not done:** gamepad support, persistent high scores, and automated tests (the headless sim makes these straightforward to add).
